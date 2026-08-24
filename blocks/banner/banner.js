@@ -10,16 +10,16 @@ export default function decorate(block) {
   const titleRow = rows[1];
   const colorRow = rows[2];
   
-  console.log("titleRow:=",titleRow);
-   console.log("colorRow:=",colorRow);
+  //console.log("titleRow:=",titleRow);
+  //console.log("colorRow:=",colorRow);
 
   const img = imageRow ? imageRow.querySelector('img') : null;
   const titleText = titleRow ? titleRow.textContent.trim() : '';
   const colorText = colorRow ? colorRow.textContent.trim() : '';
 
 
- console.log("titleText:=",titleText);
- console.log("colorText:=",colorText);
+ //console.log("titleText:=",titleText);
+ //console.log("colorText:=",colorText);
 
   // Build optimized picture if an image was authored
   let picture = null;
@@ -30,7 +30,7 @@ export default function decorate(block) {
   // Determine background color: use authored value if valid, else default blue
   const bgColor = isValidColor(colorText) ? colorText : DEFAULT_BG_COLOR;
   
-  console.log("bgColor:=",bgColor);
+  //console.log("bgColor:=",bgColor);
 
   // Clear original authored content
   block.textContent = '';

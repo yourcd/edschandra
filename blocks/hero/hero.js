@@ -51,13 +51,13 @@ export default function decorate(block) {
     }
   });
 
-console.log('headerText:='+headerText);
+/*console.log('headerText:='+headerText);
 console.log('subHeaderText:='+subHeaderText);
 console.log('bodyText:='+bodyText);
 console.log('imageSrc:='+imageSrc);
 console.log('imageAlt:='+imageAlt);
 console.log('ctaLabel:='+ctaLabel);
-console.log('ctaHref:='+ctaHref);
+console.log('ctaHref:='+ctaHref);*/
  
 
   // Clear the original table-based markup
