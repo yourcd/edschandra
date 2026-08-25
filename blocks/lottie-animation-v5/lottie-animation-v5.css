@@ -1,0 +1,117 @@
+/* Lottie animation block (v5) — Cyber security, Swivel-style (getswivel.io), viewBox 610×352 */
+
+main .section.lottie-animation-v5-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: visible;
+}
+
+main .section.lottie-animation-v5-container > div {
+  max-width: 100%;
+  overflow: visible;
+}
+
+@media (width >= 992px) {
+  main .section.lottie-animation-v5-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  main .section.lottie-animation-v5-container > .default-content-wrapper,
+  main .section.lottie-animation-v5-container > .lottie-animation-v5-wrapper {
+    max-width: none;
+  }
+
+  main .section.lottie-animation-v5-container > .default-content-wrapper {
+    flex: 0 0 41.6667%;
+    max-width: 41.6667%;
+    min-width: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  main .section.lottie-animation-v5-container > .default-content-wrapper .button-container,
+  main .section.lottie-animation-v5-container > .default-content-wrapper p:has(a.button) {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  main .section.lottie-animation-v5-container > .default-content-wrapper .button-container a.button,
+  main .section.lottie-animation-v5-container > .default-content-wrapper p:has(a.button) a.button {
+    margin-left: 0;
+  }
+
+  main .section.lottie-animation-v5-container > .lottie-animation-v5-wrapper {
+    flex: 0 0 58.3333%;
+    max-width: 58.3333%;
+    min-width: 0;
+  }
+
+  main .section.lottie-animation-v5-container > .lottie-animation-v5-wrapper:only-child {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.lottie-animation-v5.block {
+  width: 100%;
+  min-height: 352px;
+  overflow: visible;
+}
+
+.lottie-animation-v5 .e-lottie__animation.lottie-container,
+.lottie-animation-v5 .lottie-container {
+  width: 100%;
+  height: 352px;
+  min-height: 352px;
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.lottie-animation-v5 .lottie-container .lottie-inner {
+  width: 100%;
+  height: 100%;
+  min-height: 352px;
+  overflow: visible;
+  aspect-ratio: 610 / 352;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.lottie-animation-v5 .lottie-container lottie-player {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 352px;
+  aspect-ratio: 610 / 352;
+}
+
+.lottie-animation-v5 .lottie-container .lottie-inner svg,
+.lottie-animation-v5 .lottie-container .lottie-inner canvas {
+  width: 100%;
+  height: 100%;
+  min-height: 352px;
+  display: block;
+  object-fit: contain;
+}
+
+@media (width >= 600px) {
+  .lottie-animation-v5 .e-lottie__animation.lottie-container,
+  .lottie-animation-v5 .lottie-container {
+    max-width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
