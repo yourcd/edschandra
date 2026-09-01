@@ -1,0 +1,37 @@
+{
+  "variantName": "hero-intro",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-09-01T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd-trendsetters.site/about-us",
+    "originPage": "about-us",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "intro-hero",
+    "imagePattern": "grid"
+  },
+  "contentPattern": {
+    "structure": "heading + subheading + 2 CTAs + image grid",
+    "buttonCount": 2,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "page intro / top-of-page hero on light background",
+      "editorial landing pages with supporting imagery"
+    ],
+    "notSuitableFor": [
+      "full-bleed background-image banners",
+      "dark/inverse overlay heroes"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/about-us"],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-01T00:00:00.000Z"
+  }
+}

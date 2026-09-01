@@ -1,0 +1,68 @@
+/* accordion-faq — styles migrated from wknd-trendsetters.site/about-us
+ * Source structure: div.faq-list > details.faq-item > summary.faq-question (label + plus icon) + div.faq-answer
+ * EDS decorated structure: .accordion-faq > details.accordion-faq-item
+ *   > summary.accordion-faq-item-label (p) + div.accordion-faq-item-body (p)
+ */
+
+.accordion-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* item */
+.accordion-faq .accordion-faq-item {
+  border: 1px solid rgb(232 232 232);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* question / summary row */
+.accordion-faq .accordion-faq-item-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 32px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.accordion-faq .accordion-faq-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-faq .accordion-faq-item-label p {
+  margin: 0;
+}
+
+/* plus icon (rotates 45deg -> x when open), matches source 20x20 stroke icon */
+.accordion-faq .accordion-faq-item-label::after {
+  content: '';
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  background: center / contain no-repeat
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='20'%20height='20'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cline%20x1='12'%20y1='5'%20x2='12'%20y2='19'/%3E%3Cline%20x1='5'%20y1='12'%20x2='19'%20y2='12'/%3E%3C/svg%3E");
+  transition: transform 0.3s;
+}
+
+.accordion-faq .accordion-faq-item[open] .accordion-faq-item-label::after {
+  transform: rotate(45deg);
+}
+
+/* answer body */
+.accordion-faq .accordion-faq-item-body {
+  padding: 0 32px 32px;
+}
+
+.accordion-faq .accordion-faq-item-body p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgb(64 64 64);
+}

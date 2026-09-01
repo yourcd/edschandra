@@ -1,0 +1,142 @@
+/* hero-banner — full-bleed dark CTA banner with background image + gradient overlay.
+   Values extracted from wknd-trendsetters.site/about-us computed styles. */
+
+/* Full-bleed black backdrop section */
+main .section.hero-banner-container {
+  background-color: var(--dark-color);
+  margin: 0;
+  padding: 64px 0;
+}
+
+@media (width >= 900px) {
+  main .section.hero-banner-container {
+    padding: 128px 0;
+  }
+}
+
+/* Block = the rounded image card */
+.hero-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 360px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+@media (width >= 900px) {
+  .hero-banner {
+    min-height: 448px;
+  }
+}
+
+/* Bottom gradient overlay */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: linear-gradient(to top, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 0%) 60%);
+}
+
+/* Row 1 = background image cell */
+.hero-banner > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Row 2 = content cell (bottom-left, above overlay) */
+.hero-banner > div:last-child {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-banner > div:first-child > div,
+.hero-banner > div:first-child picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.hero-banner > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* If no image, fall back to solid dark card so text stays legible */
+.hero-banner.no-image::before {
+  background-image: none;
+  background-color: var(--dark-color);
+}
+
+.hero-banner > div:last-child > div {
+  max-width: 672px;
+  padding: 32px;
+}
+
+@media (width >= 900px) {
+  .hero-banner > div:last-child > div {
+    padding: 64px;
+  }
+}
+
+.hero-banner h2 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: -0.72px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--background-color);
+}
+
+@media (width >= 900px) {
+  .hero-banner h2 {
+    font-size: 56px;
+    line-height: 61.6px;
+    letter-spacing: -1.12px;
+  }
+}
+
+.hero-banner p {
+  margin: 16px 0 0;
+  font-size: 18px;
+  line-height: 28.8px;
+  color: var(--background-color);
+}
+
+/* CTA — source renders the closing link as a white pill.
+   The link may or may not be auto-decorated as a.button, so target both. */
+.hero-banner p:has(> a:only-child) {
+  margin-top: 32px;
+}
+
+.hero-banner p > a:only-child,
+main .hero-banner a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 12px 24px;
+  border: 2px solid var(--background-color);
+  border-radius: 9999px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22.4px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero-banner p > a:only-child:hover,
+.hero-banner p > a:only-child:focus-visible,
+main .hero-banner a.button:any-link:hover,
+main .hero-banner a.button:any-link:focus-visible {
+  background-color: transparent;
+  color: var(--background-color);
+  text-decoration: none;
+}
