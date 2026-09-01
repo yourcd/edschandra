@@ -1,0 +1,50 @@
+/* Block: columns-media — image + text (heading + byline) side-by-side.
+   Values extracted from source computed styles at
+   https://wknd-trendsetters.site/about-us */
+
+.columns-media > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columns-media img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* text column: heading + byline paragraphs */
+.columns-media > div > div p {
+  font-size: var(--body-font-size-xs); /* 14px — source paragraph-sm */
+  line-height: 1.6;
+  color: var(--link-color); /* rgb(102 102 102) — utility-text-secondary */
+  margin: 0.25em 0 0;
+}
+
+/* stacked (mobile): image first */
+.columns-media > div > div {
+  order: 1;
+}
+
+.columns-media > div > .columns-media-img-col {
+  order: 0;
+}
+
+.columns-media > div > .columns-media-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .columns-media > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .columns-media > div > div {
+    flex: 1;
+    order: unset;
+  }
+}

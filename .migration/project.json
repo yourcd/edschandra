@@ -1,0 +1,15 @@
+{
+  "type": "da",
+  "sites": {
+    "edschandra": {
+      "previewOrg": "yourcd",
+      "previewSite": "edschandra",
+      "contentHostUrl": "https://content.da.live/yourcd/edschandra/",
+      "libraryUrl": "https://main--edschandra--yourcd.aem.live/tool/sidekick/library.json"
+    }
+  },
+  "pluginRoot": "/home/node/.excat-marketplaces/excat-marketplace/excat",
+  "features": [
+    "site-planning"
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "about-us",
+      "urls": [
+        "https://wknd-trendsetters.site/about-us"
+      ],
+      "representativeUrl": "https://wknd-trendsetters.site/about-us",
+      "description": "About Us page: intro hero, case-study columns, image gallery cards, tabbed testimonials, article cards, FAQ accordion, and closing CTA banner.",
+      "urlPattern": "/*",
+      "blocks": [
+        {
+          "name": "hero-intro",
+          "instances": [
+            "#main-content > header.section.secondary-section .grid-layout.tablet-1-column.grid-gap-xxl"
+          ]
+        },
+        {
+          "name": "columns-media",
+          "instances": [
+            "#main-content > section.section:nth-of-type(1) .grid-layout.tablet-1-column.grid-gap-lg"
+          ]
+        },
+        {
+          "name": "cards-gallery",
+          "instances": [
+            "#main-content > section.section.secondary-section:nth-of-type(2) .grid-layout.desktop-4-column"
+          ]
+        },
+        {
+          "name": "tabs-testimonial",
+          "instances": [
+            "#main-content > section.section:nth-of-type(3) .tabs-wrapper"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            "#main-content > section.section.secondary-section:nth-of-type(4) .grid-layout.desktop-4-column"
+          ]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": [
+            "#main-content > section.section:nth-of-type(5) .grid-layout.tablet-1-column.grid-gap-xxl"
+          ]
+        },
+        {
+          "name": "hero-banner",
+          "instances": [
+            "#main-content > section.section.inverse-section .grid-layout.desktop-1-column"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "Intro hero",
+          "selector": "#main-content > header.section.secondary-section",
+          "style": "secondary",
+          "blocks": ["hero-intro"],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "Case-study intro",
+          "selector": "#main-content > section.section:nth-of-type(1)",
+          "style": null,
+          "blocks": ["columns-media"],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "Snapshot image gallery",
+          "selector": "#main-content > section.section.secondary-section:nth-of-type(2)",
+          "style": "secondary",
+          "blocks": ["cards-gallery"],
+          "defaultContent": [
+            "#main-content > section.section.secondary-section:nth-of-type(2) .utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc4",
+          "name": "Testimonials tabs",
+          "selector": "#main-content > section.section:nth-of-type(3)",
+          "style": null,
+          "blocks": ["tabs-testimonial"],
+          "defaultContent": []
+        },
+        {
+          "id": "rc5",
+          "name": "Latest articles",
+          "selector": "#main-content > section.section.secondary-section:nth-of-type(4)",
+          "style": "secondary",
+          "blocks": ["cards-article"],
+          "defaultContent": [
+            "#main-content > section.section.secondary-section:nth-of-type(4) .utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc6",
+          "name": "FAQ accordion",
+          "selector": "#main-content > section.section:nth-of-type(5)",
+          "style": null,
+          "blocks": ["accordion-faq"],
+          "defaultContent": []
+        },
+        {
+          "id": "rc7",
+          "name": "Closing CTA banner",
+          "selector": "#main-content > section.section.inverse-section",
+          "style": null,
+          "blocks": ["hero-banner"],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

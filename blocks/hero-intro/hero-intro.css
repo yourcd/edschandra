@@ -1,0 +1,111 @@
+/* Block: hero-intro — two-column intro (text + image grid) */
+
+/* Values extracted from source computed styles on /about-us */
+
+.hero-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Row order: source shows text first, then image grid.
+   Authored DOM has images first, so pull text above on all viewports. */
+.hero-intro .hero-intro-text {
+  order: 1;
+}
+
+.hero-intro .hero-intro-media {
+  order: 2;
+}
+
+/* Text column */
+.hero-intro .hero-intro-text > div {
+  max-width: 544px;
+}
+
+.hero-intro h1 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.hero-intro p {
+  margin: 24px 0 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Button group */
+.hero-intro .hero-intro-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 32px 0 0;
+}
+
+.hero-intro a.hero-intro-btn:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 12px 24px;
+  border: 2px solid var(--text-color);
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero-intro a.hero-intro-btn.primary:any-link {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+.hero-intro a.hero-intro-btn.secondary:any-link {
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+/* Image grid (right column): 2-up on all sizes.
+   EDS wraps the three bare images in a single <p>; make that <p> the grid. */
+.hero-intro .hero-intro-media p {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0;
+}
+
+.hero-intro .hero-intro-media picture {
+  display: block;
+  line-height: 0;
+}
+
+.hero-intro img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media (width >= 900px) {
+  .hero-intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+
+  .hero-intro h1 {
+    font-size: 56px;
+    line-height: 61.6px;
+    letter-spacing: -1.12px;
+  }
+}
