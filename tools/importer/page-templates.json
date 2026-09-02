@@ -1,12 +1,12 @@
 {
-  "metadata": {
-    "projectType": "da"
-  },
   "templates": [
     {
       "name": "about-us",
       "urls": [
-        "https://wknd-trendsetters.site/about-us"
+        "https://wknd-trendsetters.site/about-us",
+        "https://wknd-trendsetters.site/fashion-trends-of-the-season",
+        "https://wknd-trendsetters.site/fashion-trends-young-adults",
+        "https://wknd-trendsetters.site/fashion-trends-young-adults-casual-sport"
       ],
       "representativeUrl": "https://wknd-trendsetters.site/about-us",
       "description": "About Us page: intro hero, case-study columns, image gallery cards, tabbed testimonials, article cards, FAQ accordion, and closing CTA banner.",
@@ -61,7 +61,9 @@
           "name": "Intro hero",
           "selector": "#main-content > header.section.secondary-section",
           "style": "secondary",
-          "blocks": ["hero-intro"],
+          "blocks": [
+            "hero-intro"
+          ],
           "defaultContent": []
         },
         {
@@ -69,7 +71,9 @@
           "name": "Case-study intro",
           "selector": "#main-content > section.section:nth-of-type(1)",
           "style": null,
-          "blocks": ["columns-media"],
+          "blocks": [
+            "columns-media"
+          ],
           "defaultContent": []
         },
         {
@@ -77,7 +81,9 @@
           "name": "Snapshot image gallery",
           "selector": "#main-content > section.section.secondary-section:nth-of-type(2)",
           "style": "secondary",
-          "blocks": ["cards-gallery"],
+          "blocks": [
+            "cards-gallery"
+          ],
           "defaultContent": [
             "#main-content > section.section.secondary-section:nth-of-type(2) .utility-text-align-center"
           ]
@@ -87,7 +93,9 @@
           "name": "Testimonials tabs",
           "selector": "#main-content > section.section:nth-of-type(3)",
           "style": null,
-          "blocks": ["tabs-testimonial"],
+          "blocks": [
+            "tabs-testimonial"
+          ],
           "defaultContent": []
         },
         {
@@ -95,7 +103,9 @@
           "name": "Latest articles",
           "selector": "#main-content > section.section.secondary-section:nth-of-type(4)",
           "style": "secondary",
-          "blocks": ["cards-article"],
+          "blocks": [
+            "cards-article"
+          ],
           "defaultContent": [
             "#main-content > section.section.secondary-section:nth-of-type(4) .utility-text-align-center"
           ]
@@ -105,7 +115,9 @@
           "name": "FAQ accordion",
           "selector": "#main-content > section.section:nth-of-type(5)",
           "style": null,
-          "blocks": ["accordion-faq"],
+          "blocks": [
+            "accordion-faq"
+          ],
           "defaultContent": []
         },
         {
@@ -113,8 +125,144 @@
           "name": "Closing CTA banner",
           "selector": "#main-content > section.section.inverse-section",
           "style": null,
-          "blocks": ["hero-banner"],
+          "blocks": [
+            "hero-banner"
+          ],
           "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "blog",
+      "urls": [
+        "https://wknd-trendsetters.site/blog",
+        "https://wknd-trendsetters.site/case-studies"
+      ],
+      "representativeUrl": "https://wknd-trendsetters.site/blog",
+      "description": "Blog/case-studies listing: intro hero, featured article columns, article card grid, and a newsletter CTA banner.",
+      "urlPattern": "/*",
+      "blocks": [
+        {
+          "name": "hero-intro",
+          "instances": [
+            "#main-content > header.section.secondary-section .grid-layout.tablet-1-column.grid-gap-xxl"
+          ]
+        },
+        {
+          "name": "columns-media",
+          "instances": [
+            "#main-content > section.section:nth-of-type(1) .grid-layout.tablet-1-column.grid-gap-lg"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            "#main-content > section.section.secondary-section#articles .grid-layout.desktop-4-column",
+            "#main-content > section.section.secondary-section:nth-of-type(2) .grid-layout.desktop-4-column"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "Intro hero",
+          "selector": "#main-content > header.section.secondary-section",
+          "style": "secondary",
+          "blocks": ["hero-intro"],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "Featured article",
+          "selector": "#main-content > section.section:nth-of-type(1)",
+          "style": null,
+          "blocks": ["columns-media"],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "Latest articles",
+          "selector": "#main-content > section.section.secondary-section#articles, #main-content > section.section.secondary-section:nth-of-type(2)",
+          "style": "secondary",
+          "blocks": ["cards-article"],
+          "defaultContent": [
+            "#main-content > section.section.secondary-section#articles .utility-text-align-center"
+          ]
+        },
+        {
+          "id": "rc4",
+          "name": "Newsletter CTA banner",
+          "selector": "#main-content > section.section.accent-section",
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [
+            "#main-content > section.section.accent-section .utility-text-align-center"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "faq",
+      "urls": [
+        "https://wknd-trendsetters.site/faq"
+      ],
+      "representativeUrl": "https://wknd-trendsetters.site/faq",
+      "description": "FAQ page: intro hero, expandable FAQ accordion, a text-only contact columns block, and a closing accent CTA banner.",
+      "urlPattern": "/*",
+      "blocks": [
+        {
+          "name": "hero-intro",
+          "instances": [
+            "#main-content > header.section.secondary-section .grid-layout.tablet-1-column.grid-gap-xxl"
+          ]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": [
+            "#main-content > section.section:nth-of-type(1) .faq-list"
+          ]
+        },
+        {
+          "name": "columns-contact",
+          "instances": [
+            "#main-content > section.section.secondary-section:nth-of-type(2) .grid-layout.tablet-1-column.grid-gap-xxl"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "Intro hero",
+          "selector": "#main-content > header.section.secondary-section",
+          "style": "secondary",
+          "blocks": ["hero-intro"],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "FAQ accordion",
+          "selector": "#main-content > section.section:nth-of-type(1)",
+          "style": null,
+          "blocks": ["accordion-faq"],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "Let's connect",
+          "selector": "#main-content > section.section.secondary-section:nth-of-type(2)",
+          "style": "secondary",
+          "blocks": ["columns-contact"],
+          "defaultContent": []
+        },
+        {
+          "id": "rc4",
+          "name": "Closing CTA banner",
+          "selector": "#main-content > section.section.accent-section",
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [
+            "#main-content > section.section.accent-section .utility-text-align-center"
+          ]
         }
       ]
     }

@@ -30,8 +30,12 @@
     ]
   },
   "usage": {
-    "pagesUsing": ["/about-us"],
-    "reuseCount": 1,
+    "pagesUsing": [
+      "/about-us",
+      "/blog",
+      "/faq"
+    ],
+    "reuseCount": 3,
     "lastUsed": "2026-09-01T00:00:00.000Z"
   }
 }
