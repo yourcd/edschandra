@@ -1,0 +1,87 @@
+/* Block: columns-contact — CSS extracted from source computed styles */
+
+/* Source: two-column "Let's connect" layout. Left = heading + intro paragraph.
+   Right = stacked contact items (label + value), spaced 32px. Text-only, no images. */
+
+/* Row: stacked on mobile, two equal columns on desktop */
+.columns-contact > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Left column: heading + intro */
+.columns-contact > div > div:first-child h2 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.columns-contact > div > div:first-child p {
+  margin: 16px 0 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgb(64 64 64);
+}
+
+/* Right column: flat sequence of h3 (label) + p/a (value) pairs.
+   Each label starts a new contact item spaced 32px from the previous value. */
+.columns-contact > div > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-contact > div > div:last-child h3 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: var(--body-font-size-xs); /* 14px */
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--link-color);
+}
+
+/* space between contact items (label sits 32px below the previous value) */
+.columns-contact > div > div:last-child h3:not(:first-child) {
+  margin-top: 32px;
+}
+
+.columns-contact > div > div:last-child p {
+  margin: 8px 0 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* contact value links: black, no underline (override global grey link + button reset) */
+.columns-contact > div > div:last-child a:any-link {
+  color: var(--text-color);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.columns-contact > div > div:last-child a:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .columns-contact > div {
+    flex-direction: row;
+    align-items: start;
+    gap: 64px;
+  }
+
+  .columns-contact > div > div {
+    flex: 1;
+  }
+}
