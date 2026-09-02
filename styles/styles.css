@@ -335,3 +335,32 @@ main .section.dark h6,
 main .section.dark p {
   color: var(--background-color);
 }
+
+/* accent CTA section — full-bleed yellow banner (source: rgb(244 254 139)) */
+main .section.accent {
+  background-color: rgb(244 254 139);
+  color: var(--text-color);
+  margin: 0;
+  padding: var(--section-padding) 0;
+}
+
+/* within an accent section the CTA renders as a solid black pill button */
+main .section.accent a:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  border: 2px solid var(--text-color);
+  border-radius: 9999px;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main .section.accent a:any-link:hover {
+  background-color: var(--dark-color);
+  border-color: var(--dark-color);
+}

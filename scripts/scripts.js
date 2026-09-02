@@ -146,10 +146,39 @@ function decorateButtons(main) {
  * Decorates the main element.
  * @param {Element} main The main element
  */
+/**
+ * Consume `.section-metadata` tables: apply their key/value pairs to the
+ * containing section (e.g. Style: secondary -> class "secondary") and remove
+ * the table so it does not render as raw text. Standard EDS section-metadata
+ * behavior, absent from this project's vendored aem.js decorateSections.
+ * @param {Element} main
+ */
+function processSectionMetadata(main) {
+  main.querySelectorAll(':scope > div > div.section-metadata').forEach((meta) => {
+    const section = meta.closest(':scope > div') || meta.parentElement;
+    [...meta.children].forEach((row) => {
+      const cells = [...row.children];
+      if (cells.length < 2) return;
+      const key = cells[0].textContent.trim().toLowerCase();
+      const value = cells[1].textContent.trim();
+      if (key === 'style') {
+        value.split(',').forEach((s) => {
+          const cls = s.trim().toLowerCase().replace(/\s+/g, '-');
+          if (cls) section.classList.add(cls);
+        });
+      } else if (key) {
+        section.dataset[key.replace(/\s+/g, '-')] = value;
+      }
+    });
+    meta.remove();
+  });
+}
+
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
+  processSectionMetadata(main);
   decorateSections(main);
   decorateBlocks(main);
   decorateButtons(main);
